@@ -1,0 +1,147 @@
+#feedback-form {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+    z-index: 1;
+    animation: 0.5s ease 0s 1 normal;
+    animation-fill-mode: forwards;
+}
+
+#feedback-form-holder {
+    width: 440px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+#feedback-form-title {
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#feedbackForm label {
+    display: block;
+    text-align: center;
+}
+
+#feedbackForm input:not([type="submit"]) {
+    display: block;
+    width: 80%;
+    margin: 0 auto 15px;
+    padding: 6px;
+    line-height: 1.7em;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#feedbackForm textarea {
+    display: block;
+    min-width: 80%;
+    max-width: 80%;
+    height: 150px;
+    margin: 0 auto 10px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+#feedbackForm input:not([type="submit"]):focus{
+    outline: none;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+#feedbackForm input:invalid{
+    font-style: italic;
+    box-shadow: inset 0 0 7px #EB4337;
+}
+
+#feedbackForm #feedback-form-submit-btn {
+    display: block;
+    margin: 20px;
+    width: 125px;
+    height: 35px;
+    background-color: #322F30;
+    border: none;
+    line-height: initial;
+    vertical-align: center;
+    font-family: inherit;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+}
+
+#feedbackForm #feedback-form-submit-btn:hover {
+    background-color: #5c5c5c;
+}
+
+#feedback-form-close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, -100%);
+    width: 30px;
+    height: 30px;
+    background-color: #322F30;
+    color: ghostwhite;
+    text-align: center;
+    line-height: 30px;
+}
+
+#feedback-form-close-btn::selection {
+    background-color: transparent;
+}
+
+#feedback-form-close-btn:hover {
+    background-color: #5c5c5c;
+}
+
+#feedback-form-close-btn:active {
+    background-color: #CFA686;
+}
+
+@keyframes hideForm {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: block;
+        z-index: 5;
+    }
+
+    100% {
+        display: none;
+        z-index: -5;
+        animation-name: none;
+    }
+}
+
+@keyframes showForm {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    100% {
+        animation-name: none;
+        display: block;
+        z-index: 1;
+    }
+}

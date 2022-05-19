@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+
+    background-attachment: fixed;
+    background-size: cover;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#wrapper {
+    font-size: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    min-height: 160px;
+    background-color: white;
+}
+
+#logo {
+    width: 125px;
+    height: 125px;
+}
+
+.content-container {
+    display: block;
+    width: 980px;
+    margin: auto;
+}
+
+#header-container {
+    color: #322F30;
+    padding: 0 10px;
+}
+
+#title-holder {
+    float: left;
+    display: flex;
+    align-items: stretch;
+    margin: 25px;
+}
+
+#title {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+}
+
+#subtitle {
+    margin: 20px 5px;
+    position: relative;
+    top: 25px;
+    font-size: 14px;
+    line-height: normal;
+}
+
+#feedback-info-holder {
+    float: right;
+    margin-top: 10px;
+    margin-left: 3em;
+}
+
+.phone-number {
+    font-size: 20px;
+    line-height: 12px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#feedback-form-link {
+    margin-top: 10px;
+    font-size: 16px;
+    border-bottom: 2px dashed #322F30;
+    float: right;
+}
+
+#feedback-form-link:hover {
+    color: #F26836;
+    border-bottom-color: #F26836;
+    cursor: pointer;
+}
+
+#feedback-form-link:active {
+    color: #CFA686;
+    border-bottom-color: #CFA686;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    background-color: #322F30;
+    padding: 3px 10px;
+}
+
+#menu-container {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu-items-separator {
+    display: block;
+    margin: 1.5em;
+}
+
+#menu-container li {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 1.5em;
+    list-style-type: none;
+}
+
+#menu-container li a {
+    color: white;
+}
+
+#menu-container li:hover a {
+    color: #F26836;
+    cursor: pointer;
+}
+
+.slider {
+    display: block;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+@keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
+}
+
+.fading-slideshow {
+    top: 0;
+    position: relative;
+    margin: 1em auto;
+    padding: 0;
+    list-style-type: none;
+    max-width: 100%;
+    height: 450px;
+}
+
+.fading-slideshow > li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fading-slideshow > li:first-of-type {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+}
+
+.fading-slideshow > li:nth-of-type(2) {
+    z-index: 10;
+}
+
+.fading-slideshow > li:nth-of-type(n+3) {
+    display: none;
+}
+
+.slider-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+#slider-section-content {
+    background-color: #322F30;
+}
+
+#path-section {
+    display: block;
+    font-size: 14px;
+    position: relative;
+}
+
+#path-section-container {
+    height: 40px;
+    line-height: 40px;
+    background-color: ghostwhite;
+}
+
+#path-section-container a {
+    color: #322F30;
+}
+
+#path-section-container a:hover {
+    color: #F26836;
+}
+
+#main-section-content {
+    display: flex;
+    align-items: stretch;
+    font-size: 14px;
+    background-color: ghostwhite;
+    padding-bottom: 100px;
+}
+
+#aside-container {
+    width: 20%;
+}
+
+#categories-list {
+    list-style-type: none;
+    height: 300px;
+    overflow: hidden;
+    alignment: left;
+}
+
+.category-title {
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: color 0.15s 0s ease-in-out;
+}
+
+.category-title:not(.current-category):hover {
+    color: #F26836;
+}
+
+.subcategories-list {
+    font-size: 14px;
+    list-style-type: square;
+}
+
+.subcategories-list a {
+    color: #272727;
+    text-decoration: none;
+}
+
+.subcategories-list a:hover {
+    color: #CFA686;
+}
+
+.current-category {
+    cursor: default;
+    text-decoration: underline;
+}
+
+.current-subcategory {
+    text-decoration: underline;
+}
+
+.current-category + .subcategories-list {
+    transition: none;
+}
+
+#price-list-download-link {
+    font-size: 1.4em;
+    color: #272727;
+    font-weight: bold;
+    text-align: center;
+
+    transition: all 0.15s 0s ease;
+}
+
+#price-list-download-link img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+#center-section {
+    flex: 1;
+    color: #322F30;
+    font-size: 14px;
+}
+
+.center-section-title {
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.center-section-title:not(:first-child) {
+    margin-top: 50px;
+}
+
+.description {
+    column-count: 2;
+    column-gap: 60px;
+    text-align: justify;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid#272727;
+    color: #272727;
+}
+
+#footer {
+    display: block;
+    width: 100%;
+    background-color: #272727;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: lightgray;
+}
+
+#footer-content > div{
+    padding: 20px 0;
+}
+
+#footer-content a{
+    color: lightgray;
+}
+
+#footer-content a:hover{
+    color: #F26836;
+}
+
+#footer-content ul{
+    list-style-type: none;
+}
+
+#price-list-holder {
+    display: block;
+    width: 98%;
+    margin: auto;
+    font-size: 14px;
+}
+
+#price-list-tab {
+    background-color: ghostwhite;
+    min-height: 150px;
+    width: 100%;
+}
+
+.price-list-table {
+    width: 100%;
+    margin-top: 20px;
+    column-width: 30px;
+    table-layout: auto;
+}
+
+#contact-container {
+    font-size: 14px;
+}
+
+.contact-item {
+    font-size: 2em;
+    line-height: 1.2em;
+    font-family: 'Lexend Deca', sans-serif;
+}
